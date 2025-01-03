@@ -25,6 +25,24 @@ const functionConst = "I'm a block-scoped const";
 }
 show();
 
-console.log(functionVar); // Throws ReferenceError
-console.log(functionLet); // Throws ReferenceError
-console.log(functionConst); // Throws ReferenceError
+// console.log(functionVar); // Throws ReferenceError
+// console.log(functionLet); // Throws ReferenceError
+// console.log(functionConst); // Throws ReferenceError
+
+// Little Practice.
+{
+    let goalsLet = 10;
+    const goalsConst = 15;
+    var goalsVar = 20;
+
+    // goalsLet = 30;
+    // goalsConst = 45;
+    // goalsVar = 60;
+}
+    let goalsLet = 30;
+    const goalsConst = 45;
+    var goalsVar = 60;
+
+    console.log(goalsVar);
+    console.log(goalsLet);
+    console.log(goalsConst);
