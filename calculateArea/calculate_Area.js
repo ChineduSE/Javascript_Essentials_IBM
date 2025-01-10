@@ -4,11 +4,10 @@ let width;
 function calculateArea() {
     length = parseFloat(document.getElementById('length').value);
     width = parseFloat(document.getElementById('width').value);
+
+    // console.log(length,width);
    
    let area = length * width;
-//    return area;
-   }
-
-   document.getElementById('result').innerText = `The area of the rectangle is: ${area}`;
-
-   console.log(area);
+//    console.log(area);
+   document.getElementById('result').innerText = `The area of the rectangle is only: ${area}`;
+}
