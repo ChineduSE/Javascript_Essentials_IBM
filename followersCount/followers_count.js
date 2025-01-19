@@ -34,8 +34,38 @@
 
 // New lines of code
 
+// function createCounter() {
+//   let initialFollowers = parseFloat(document.getElementById("countDisplay").innerText);
+
+//   function increaseCount() {
+//       initialFollowers++; // Increment the count
+//       document.getElementById("countDisplay").innerText = initialFollowers; // Update the DOM
+
+//       // Display milestone alerts
+//       if (initialFollowers === 10) {
+//           alert("Congratulations, you hit 10 followers!");
+//       } else if (initialFollowers === 20) {
+//           alert("Congratulations, you hit a major milestone: 20 followers!");
+//       }
+//   }
+
+//   function resetCount() {
+//       initialFollowers = parseFloat(document.getElementById("countDisplay").innerText); // Reset to default
+//       console.log(`initial follower is ${initialFollowers}`);
+//       document.getElementById("countDisplay").innerText = initialFollowers; // Update the DOM
+//       alert("Your followers have been reset to the default value.");
+//       console.log(initialFollowers);
+//   }
+
+//   return { increaseCount, resetCount };
+// }
+
+// const { increaseCount, resetCount } = createCounter();
+
+
 function createCounter() {
-  let initialFollowers = parseFloat(document.getElementById("countDisplay").innerText);
+  const defaultFollowers = parseFloat(document.getElementById("countDisplay").innerText); // Store the default value
+  let initialFollowers = defaultFollowers; // Initialize `initialFollowers` with the default value
 
   function increaseCount() {
       initialFollowers++; // Increment the count
@@ -50,11 +80,9 @@ function createCounter() {
   }
 
   function resetCount() {
-      initialFollowers = parseFloat(document.getElementById("countDisplay").innerText); // Reset to default
-      console.log(`initial follower is ${initialFollowers}`);
+      initialFollowers = defaultFollowers; // Reset to the default value
       document.getElementById("countDisplay").innerText = initialFollowers; // Update the DOM
       alert("Your followers have been reset to the default value.");
-      console.log(initialFollowers);
   }
 
   return { increaseCount, resetCount };
